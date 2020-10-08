@@ -90,6 +90,15 @@ body {
   width: 20.5rem;
 }
 
+@media (min-width: 57.875rem) {
+  .header {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    max-width: 21.875rem;
+  }
+}
+
 .header__logo {
   padding-bottom: 1rem;
   width: auto;
@@ -137,6 +146,7 @@ body {
         -ms-flex-positive: 1;
             flex-grow: 1;
     width: 84%;
+    max-width: 34rem;
   }
 }
 

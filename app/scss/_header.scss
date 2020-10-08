@@ -9,6 +9,11 @@ $ctaHeight: 52px;
     padding: toRem(40px);
     width: toRem($mb-content-width);
 
+    @include breakpoint-up(large) {
+        flex-grow: 1;
+        max-width: toRem(350px);
+    }
+
     &__logo {        
         padding-bottom: toRem(16px);
         width: auto;

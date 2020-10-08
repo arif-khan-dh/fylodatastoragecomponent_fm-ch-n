@@ -18,6 +18,7 @@ $emphasis-bubble-arrow: 24px;
     @include breakpoint-up(medium) {
         flex-grow: 1;
         width: 84%;
+        max-width: toRem(544px);
     }
 
     @include breakpoint-up(xlarge) {
@@ -60,7 +61,6 @@ $emphasis-bubble-arrow: 24px;
                 height: 100%;
                 width: 80%;
                 border-radius: toRem($border-radius);
-                // padding: toRem(2px);
 
                 &::after {
                     position: absolute;
