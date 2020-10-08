@@ -30,14 +30,10 @@ body {
     background-size: cover;
     background-color: $veryDarkBlue;
 
-    @include breakpoint-up(large) {
-        background-image: url(../../images/bg-desktop.png);
-        background-size: contain;
-        background-position: bottom;
-    }
-
     @include breakpoint-up(xlarge) {
+        background-image: url(../../images/bg-desktop.png);
         background-size: 100% 50%;
+        background-position: bottom;
     }
 }
 
