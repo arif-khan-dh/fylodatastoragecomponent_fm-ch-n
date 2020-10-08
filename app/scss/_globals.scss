@@ -17,24 +17,48 @@ body {
     font-family: "Raleway", sans-serif;
     font-size: $font-sm;
 
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-    display: grid;
-    place-content: center;
+    // display: grid;
+    // place-content: center;
 
     background-image: url(../../images/bg-mobile.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-color: $veryDarkBlue;
+
+    @include breakpoint-up(large) {
+        background-image: url(../../images/bg-desktop.png);
+        background-size: contain;
+        background-position: bottom;
+    }
+
+    @include breakpoint-up(xlarge) {
+        background-size: 100% 50%;
+    }
 }
 
 .container {
-    margin: 0 auto;
+    // margin: 0 auto;
     // width: toRem(380px);
-    // max-width: toRem(380px);
-    width: auto;
+    max-width: toRem(380px);
+    // width: auto;
     display: flex;
     flex-direction: column;
+    flex-grow: 1;
     align-items: center;
+
+    @include breakpoint-up(medium) {
+        flex-grow: 1;
+        max-width: 70%;
+    }
+
+    @include breakpoint-up(xlarge) {
+        flex-direction: row;
+        max-width: toRem(922px);
+        align-items: flex-end;
+    }
 }

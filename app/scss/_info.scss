@@ -3,6 +3,7 @@ $padding-top: 36px;
 $padding: 32px;
 
 $bar-height: 20px;
+$emphasis-bubble-arrow: 24px;
 
 .info {
     color: $paleBlue;
@@ -14,11 +15,26 @@ $bar-height: 20px;
     margin-top: toRem($margin-top);
     width: toRem($mb-content-width);
 
+    @include breakpoint-up(medium) {
+        flex-grow: 1;
+        width: 84%;
+    }
+
+    @include breakpoint-up(xlarge) {
+        margin-top: 0px;
+        margin-left: toRem(30px);
+        flex-grow: 1;
+    }
+
 
     &__text {
         text-align: center;
         font-size: $font-xsm;
         margin-bottom: toRem(20px);
+
+        @include breakpoint-up(xlarge) {
+            text-align: left;
+        }
 
         span {
             font-weight: 700;
@@ -66,6 +82,10 @@ $bar-height: 20px;
             justify-content: space-between;
             font-weight: 700;
             margin-bottom: toRem(10px);
+
+            @include breakpoint-up(xlarge) {
+                margin-bottom: 0px;
+            }
         }
 
         .progress__emphasize {
@@ -82,6 +102,24 @@ $bar-height: 20px;
             display: flex;
             align-items: center;
 
+            @include breakpoint-up(xlarge) {
+                left: 100%;
+                transform: translate(-100%);
+                top: calc(calc(#{toRem(60px)} + 100%) * (-1));
+            }
+
+            &::after {
+
+                @include breakpoint-up(xlarge) {
+                    content: "";
+                    position: absolute;
+                    border-top: toRem($emphasis-bubble-arrow) solid transparent;
+                    border-right: toRem($emphasis-bubble-arrow) solid white;
+                    border-bottom: toRem($emphasis-bubble-arrow) solid transparent;
+                    right: 0px;
+                    top: calc(100% - #{$emphasis-bubble-arrow});
+                }
+            }
 
             span {
 
