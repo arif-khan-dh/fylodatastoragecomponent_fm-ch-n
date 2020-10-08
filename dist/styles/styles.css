@@ -16,6 +16,17 @@ body {
   min-height: 100vh;
   font-family: "Raleway", sans-serif;
   font-size: 1rem;
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  background-image: url(../../images/bg-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  margin: 0 auto;
+  width: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,21 +34,146 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: 1px solid black;
-}
-
-.container {
-  margin: 0 auto;
-  width: 23.75rem;
-  border: 1px solid red;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .header {
   background-color: #1d2c67;
-  width: 20.5rem;
+  border-radius: 0.625rem;
+  border-top-right-radius: 4.375rem;
   padding: 2.5rem;
+  width: 20.5rem;
+}
+
+.header__logo {
+  padding-bottom: 1rem;
+  width: auto;
+}
+
+.header__cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__cta .cta {
+  width: 3.25rem;
+  height: 3.25rem;
+  background-color: #0c122c;
+  border-radius: 0.625rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__cta .cta:not(:nth-child(1)) {
+  margin-left: 1rem;
+}
+
+.info {
+  color: #dddbff;
+  background-color: #1d2c67;
+  border-radius: 0.625rem;
+  padding: 2rem;
+  padding-top: 2.25rem;
+  margin-top: 1rem;
+  width: 20.5rem;
+}
+
+.info__text {
+  text-align: center;
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.info__text span {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.info__progress {
+  position: relative;
+}
+
+.info__progress .progress__bar {
+  background-color: #0c122c;
+  height: 1.25rem;
+  border-radius: 10px;
+  margin-bottom: 0.75rem;
+  padding: 0.1875rem;
+}
+
+.info__progress .progress__bar .bar__progress-indicator {
+  position: relative;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffa399), to(#ff4d97));
+  background-image: linear-gradient(to right, #ffa399, #ff4d97);
+  height: 100%;
+  width: 80%;
+  border-radius: 0.625rem;
+}
+
+.info__progress .progress__bar .bar__progress-indicator::after {
+  position: absolute;
+  content: '';
+  display: block;
+  background-color: #dddbff;
+  height: 0.6875rem;
+  width: 0.6875rem;
+  border-radius: 50%;
+  right: 0.125rem;
+  top: 0.09375rem;
+}
+
+.info__progress .progress__limits {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: 700;
+  margin-bottom: 0.625rem;
+}
+
+.info__progress .progress__emphasize {
+  position: absolute;
+  font-size: 2rem;
+  color: #0c122c;
+  font-weight: 700;
+  background-color: white;
+  border-radius: 0.625rem;
+  padding: 1rem 1.625rem;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info__progress .progress__emphasize span:first-child {
+  line-height: normal;
+}
+
+.info__progress .progress__emphasize span:last-child {
+  font-size: 0.75rem;
+  color: #848794;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+  margin-left: 0.5rem;
 }
 /*# sourceMappingURL=styles.css.map */

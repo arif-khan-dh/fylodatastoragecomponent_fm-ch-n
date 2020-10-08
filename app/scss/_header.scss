@@ -1,5 +1,36 @@
+// Variables 
+$ctaWidth: 52px;
+$ctaHeight: 52px;
+
 .header {
     background-color: $darkBlue;
-    width: toRem(328px);
+    border-radius: toRem($border-radius);
+    border-top-right-radius: toRem(70px);
     padding: toRem(40px);
+    width: toRem($mb-content-width);
+
+    &__logo {        
+        padding-bottom: toRem(16px);
+        width: auto;
+    }
+
+    &__cta {
+        display: flex;
+
+
+        .cta {
+            width: toRem($ctaWidth);
+            height: toRem($ctaHeight);
+            background-color: $veryDarkBlue;
+            border-radius: toRem($border-radius);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            &:not(:nth-child(1)) {
+                margin-left: toRem(16px);
+            }
+        }
+    }
+    
 }

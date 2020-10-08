@@ -1,3 +1,103 @@
+$margin-top: 16px;
+$padding-top: 36px;
+$padding: 32px;
+
+$bar-height: 20px;
+
 .info {
+    color: $paleBlue;
+    background-color: $darkBlue;
+    border-radius: toRem($border-radius);
     
+    padding: toRem($padding);
+    padding-top: toRem($padding-top);
+    margin-top: toRem($margin-top);
+    width: toRem($mb-content-width);
+
+
+    &__text {
+        text-align: center;
+        font-size: $font-xsm;
+        margin-bottom: toRem(20px);
+
+        span {
+            font-weight: 700;
+            font-size: $font-sm;
+        }
+    }
+
+
+    &__progress {
+        position: relative;
+
+        .progress__bar {
+            background-color: $veryDarkBlue;
+            height: toRem($bar-height);
+            border-radius: $border-radius;
+            margin-bottom: toRem(12px);
+            padding: toRem(3px);
+
+
+            .bar__progress-indicator {
+                position: relative;
+                background-image: $linear-gradient;
+                height: 100%;
+                width: 80%;
+                border-radius: toRem($border-radius);
+                // padding: toRem(2px);
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    display: block;
+                    background-color: $paleBlue;
+                    height: toRem(11px);
+                    width: toRem(11px);
+                    border-radius: 50%;
+                    right: toRem(2px);
+                    top: toRem(1.5px);
+
+                }
+            }
+        }
+
+        .progress__limits {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            margin-bottom: toRem(10px);
+        }
+
+        .progress__emphasize {
+            position: absolute;
+            font-size: $font-xxlg;
+            color: $veryDarkBlue;
+            font-weight: 700;
+            background-color: white;
+            border-radius: toRem($border-radius);
+            padding: toRem(16px) toRem(26px);
+            left: 50%;
+            transform: translate(-50%);
+            width: max-content;
+            display: flex;
+            align-items: center;
+
+
+            span {
+
+                &:first-child {
+                    line-height: normal;
+                }
+
+                &:last-child {
+                    font-size: $font-xxsm;
+                    color: $grayishBlue;
+                    text-transform: uppercase;
+                    letter-spacing: toRem(2px);
+                    margin-left: toRem(8px);
+                }
+
+            }
+        }
+    }
 }
